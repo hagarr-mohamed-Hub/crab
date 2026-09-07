@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اختبار تحديد المجال المهني</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- شاشة الاختبار -->
+        <div id="testScreen" class="screen active">
+            <div class="header">
+                <h1>اختبر نفسك وتعرف على مجالك المثالي</h1>
+                <p>أجب على الأسئلة بصراحة لتحصل على النتائج الأدق</p>
+            </div>
+
+            <div class="progress-section">
+                <div class="progress-text">
+                    السؤال <span id="currentQuestion">1</span> من <span id="totalQuestions">12</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+            </div>
+
+            <div class="question-section">
+                <h2 id="questionText"></h2>
+                <div class="answers" id="answersContainer"></div>
+            </div>
+
+            <div class="footer">
+                <p>لا توجد إجابات صحيحة أو خاطئة - اختر ما يعكس ما تشعر به حقاً</p>
+            </div>
+        </div>
+
+        <!-- شاشة النتائج -->
+        <div id="resultsScreen" class="screen">
+            <div class="results-header">
+                <h1>نتائجك 🎯</h1>
+                <p>بناءً على إجاباتك، إليك أفضل 3 مجالات لك</p>
+            </div>
+
+            <div id="resultsContainer"></div>
+
+            <button class="reset-button" onclick="resetTest()">إعادة الاختبار</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
